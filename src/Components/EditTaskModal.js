@@ -32,11 +32,17 @@ export default function EditTaskModal({ task, items, onClickOutside, onClickClos
     const onSubmitForm = (event) => {
         event.preventDefault();
 
-        const date = new Date().getDate;
+        const currentDate = new Date();
+
+        const day = currentDate.getDate().toString().padStart(2, '0');
+        const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+        const year = currentDate.getFullYear().toString();
+
+        const formattedDate = `${day}/${month}/${year}`;
 
         let taskData = {};
 
-        if (task.status === "Completed") {
+        if (formData.status === "Completed") {
             taskData = {
                 title: formData.title,
                 description: formData.description,
@@ -44,8 +50,8 @@ export default function EditTaskModal({ task, items, onClickOutside, onClickClos
                 assignee: formData.assignees,
                 priority: formData.priority,
                 status: formData.status,
-                start_date: task.start_date,
-                end_date: date
+                start_date: formData.start_date,
+                end_date: formattedDate
             };
         } else {
             taskData = {
@@ -55,8 +61,8 @@ export default function EditTaskModal({ task, items, onClickOutside, onClickClos
                 assignee: formData.assignees,
                 priority: formData.priority,
                 status: formData.status,
-                start_date: task.start_date,
-                end_date: task.end_date
+                start_date: formData.start_date,
+                end_date: formData.end_date
             };
         }
 
