@@ -1,7 +1,4 @@
-import React from 'react';
-
 export default function Board({ title, titleBackgroundColor, children }) {
-
     return (
         <div
           style={{
@@ -40,11 +37,3 @@ export default function Board({ title, titleBackgroundColor, children }) {
         </div>
     );
 }
-
-// const windowWidth = Dimensions.get('window').width;
-// const windowHeight = Dimensions.get('window').height;
-
-// const containerWidth = windowWidth * 0.9;
-
-// console.log(`Window width: ${windowWidth}`);
-// console.log(`Container width: ${containerWidth}`);
