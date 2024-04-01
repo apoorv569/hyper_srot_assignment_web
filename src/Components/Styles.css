@@ -1,0 +1,16 @@
+.datePickerBox {
+    width: 250px;
+    height: 40px;
+    background-color: #faf6fd;
+    color: #67646b;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: none;
+}

@@ -1,0 +1,13 @@
+Start the development server
+
+#+begin_src shell
+  npm start
+#+end_src
+
+Also need to start the local =json-server=
+
+#+begin_src shell
+  npx json-server --watch public/data/data.json --port 8000
+#+end_src
+
+Then go the browser and visit =localhost:3000=
